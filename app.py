@@ -3,12 +3,11 @@ import os, sys
 # sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
 
 import streamlit as st
-st.write("XSRF:", st.get_option("server.enableXsrfProtection"))
-
 from PIL import Image, ImageOps
 from clouds.serving.model_service import CloudClassifier
 
 st.set_page_config(page_title="Cloud Classifier", page_icon="☁️", layout="centered") # emoji in code spotted!
+st.write("XSRF:", st.get_option("server.enableXsrfProtection"))
 st.title("Cloud Classifier")
 
 MODEL_PATH = os.getenv("CLOUDS_MODEL_PATH", "models/clouds_bundle.pt")
