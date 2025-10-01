@@ -15,4 +15,4 @@ COPY clouds ./clouds
 RUN mkdir -p models
 COPY models/clouds_bundle.pt ./models/clouds_bundle.pt
 
-CMD streamlit run app.py --server.port $PORT --server.address 0.0.0.0
+CMD streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.enableXsrfProtection false

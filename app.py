@@ -3,6 +3,8 @@ import os, sys
 # sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
 
 import streamlit as st
+st.write("XSRF:", st.get_option("server.enableXsrfProtection"))
+
 from PIL import Image, ImageOps
 from clouds.serving.model_service import CloudClassifier
 
