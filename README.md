@@ -1,8 +1,8 @@
 ---
 title: Cloud Classifier
 emoji: ☁️
-colorFrom: green
-colorTo: indigo
+colorFrom: white
+colorTo: blue
 sdk: docker
 pinned: false
 short_description: Cloud type classification with ConvNeXt and NASA GAZE data
