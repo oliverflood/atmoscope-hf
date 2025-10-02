@@ -1,5 +1,5 @@
 ---
-title: Cloud Classifier
+title: Atmoscope
 emoji: ☁️
 colorFrom: blue
 colorTo: indigo

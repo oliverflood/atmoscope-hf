@@ -6,8 +6,10 @@ import streamlit as st
 from PIL import Image, ImageOps
 from clouds.serving.model_service import CloudClassifier
 
-st.set_page_config(page_title="Cloud Classifier", page_icon="☁️", layout="centered") # emoji in code spotted!
-st.title("Cloud Classifier")
+st.set_page_config(page_title="Atmoscope", page_icon="☁️", layout="centered") # emoji in code spotted!
+st.title("Atmoscope: cloud genus classifier")
+st.text("Better models are still in progress! Associated outputs and predictions will display for uploaded photos. " \
+        "Classifications are multi-label, so multiple cloud types within an image can be identified.")
 
 MODEL_PATH = os.getenv("CLOUDS_MODEL_PATH", "models/clouds_bundle.pt")
 
@@ -17,7 +19,7 @@ def load_service():
 
 svc = load_service()
 
-uploaded = st.file_uploader("Upload a cloud photo", type=["png", "jpg", "jpeg"])
+uploaded = st.file_uploader("Upload a cloud photo below.", type=["png", "jpg", "jpeg"])
 
 if uploaded:
     img = Image.open(uploaded)
