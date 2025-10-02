@@ -8,8 +8,9 @@ from clouds.serving.model_service import CloudClassifier
 
 st.set_page_config(page_title="Atmoscope", page_icon="☁️", layout="centered") # emoji in code spotted!
 st.title("Atmoscope: cloud genus classifier")
-st.text("Better models are still in progress! Associated outputs and predictions will display for uploaded photos. " \
-        "Classifications are multi-label, so multiple cloud types within an image can be identified.")
+st.text("Better models are still in progress! ")
+st.text("Associated outputs and predictions will display for uploaded photos. ")
+st.text("Classifications are multi-label, so multiple cloud types within an image can be identified.")
 
 MODEL_PATH = os.getenv("CLOUDS_MODEL_PATH", "models/clouds_bundle.pt")
 
